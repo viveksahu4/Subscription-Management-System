@@ -1,0 +1,248 @@
+.hero {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-home {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/hero-bg.png') center/cover no-repeat;
+  min-height: 450px;
+}
+
+.hero-home::before {
+  display: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%23333" width="400" height="400"/></svg>') center/cover;
+  opacity: 0.5;
+}
+
+.page-banner {
+  background: var(--secondary);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.page-banner h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.main-col p {
+  margin-bottom: 1rem;
+}
+
+.main-col h3 {
+  margin: 2rem 0 1rem;
+  font-size: 1.1rem;
+}
+
+.main-col ul {
+  margin: 0 0 1rem 1.5rem;
+}
+
+.sidebar-col h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.useful-links a::before {
+  content: '→';
+  font-size: 0.9rem;
+  margin-right: 0.25rem;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content.center {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  max-width: 500px;
+  line-height: 1.2;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.hero-inspire .hero-content p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 1rem 0 1.5rem;
+  font-size: 1.1rem;
+}
+
+.btn-hero {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.btn-hero:hover {
+  background: var(--primary-dark);
+  color: white;
+}
+
+.section-divider {
+  height: 4px;
+  background: var(--primary);
+}
+
+.section {
+  padding: 4rem 2rem;
+}
+
+.section-white {
+  background: white;
+}
+
+.section-gray {
+  background: #f5f5f5;
+}
+
+.section-desc {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.exclusive-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.exclusive-item {
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--text);
+  transition: all 0.2s;
+}
+
+.exclusive-item:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: white;
+}
+
+.section-cta {
+  background: var(--secondary);
+  color: white;
+}
+
+.section-cta .section-title {
+  color: white;
+}
+
+.section-cta .section-title::after {
+  background: white;
+}
+
+.section-cta .section-desc {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn-outline {
+  border-color: white;
+  color: white;
+}
+
+.cta-buttons .btn-outline:hover {
+  background: white;
+  color: var(--secondary);
+}
