@@ -1,0 +1,43 @@
+.page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  background: #2d2d2d;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: overlayFadeIn 0.3s ease-out;
+}
+
+.page-transition-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-transition-icon {
+  width: 80px;
+  height: 80px;
+  animation: iconPulse 1s ease-in-out infinite;
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes iconPulse {
+  0%,
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}

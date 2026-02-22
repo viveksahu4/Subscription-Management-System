@@ -46,10 +46,10 @@ const About = () => (
         <div className="sidebar-col">
           <h3>USEFUL LINKS</h3>
           <ul className="useful-links">
-            <li><Link to="/classes/crossfit">Classes</Link></li>
+            <li><Link to="/classes">Classes</Link></li>
             <li><Link to="/diet">Diet Counseling</Link></li>
-            <li><Link to="/fitness">Workout</Link></li>
-            <li><Link to="/fitness#nutrition">Nutrition</Link></li>
+            <li><Link to="/workout">Workout</Link></li>
+            <li><Link to="/nutrition">Nutrition</Link></li>
             <li><Link to="/spa">Spa</Link></li>
             <li><Link to="/swimming">Swimming</Link></li>
           </ul>

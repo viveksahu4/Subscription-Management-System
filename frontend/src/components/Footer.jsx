@@ -14,10 +14,6 @@ const Footer = () => (
           to not only build a well-structured or sculpted body, but to create a positive self-image
           and feel confident from inside out.
         </p>
-        <div className="footer-social">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-        </div>
       </div>
       <div className="footer-col">
         <h4>ABOUT US</h4>
@@ -33,8 +29,8 @@ const Footer = () => (
         <ul>
           <li><Link to="/classes">Classes</Link></li>
           <li><Link to="/diet">Diet Counseling</Link></li>
-          <li><Link to="/fitness">Workout</Link></li>
-          <li><Link to="/fitness#nutrition">Nutrition</Link></li>
+          <li><Link to="/workout">Workout</Link></li>
+          <li><Link to="/nutrition">Nutrition</Link></li>
           <li><Link to="/spa">Spa</Link></li>
           <li><Link to="/swimming">Swimming</Link></li>
         </ul>
@@ -47,7 +43,7 @@ const Footer = () => (
         <p className="footer-phone">8966977389</p>
         <p className="footer-phone">9981068683</p>
         <p className="footer-email">cstechsv2531@gmail.com</p>
-        <Link to="/contact" className="footer-map">Find us on the map</Link>
+        <Link to="/contact#map" className="footer-map">Find us on the map</Link>
       </div>
     </div>
     <div className="footer-bottom">

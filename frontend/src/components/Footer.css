@@ -41,15 +41,22 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  transition: color 0.2s, transform 0.2s;
 }
 
 .footer-col ul li a::before {
   content: '→';
   font-size: 0.8rem;
+  transition: transform 0.2s;
 }
 
 .footer-col ul li a:hover {
   color: white;
+  transform: translateX(4px);
+}
+
+.footer-col ul li a:hover::before {
+  transform: translateX(2px);
 }
 
 .footer-social {
@@ -84,6 +91,12 @@
   margin-top: 0.5rem;
   color: var(--primary);
   font-weight: 500;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.footer-map:hover {
+  color: #ff6b6b;
+  transform: translateX(2px);
 }
 
 .footer-map::before {

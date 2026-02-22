@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { PageTransitionProvider } from './context/PageTransitionContext';
 import Layout from './components/Layout';
 import ProtectedRoute from './components/ProtectedRoute';
 import RoleGuard from './components/RoleGuard';
@@ -12,6 +13,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Calculators from './pages/Calculators';
 import InfoPage from './pages/InfoPage';
+import Classes from './pages/Classes';
 import ClassDetail from './pages/ClassDetail';
 import DietCounseling from './pages/DietCounseling';
 import Workout from './pages/Workout';
@@ -47,11 +49,12 @@ const App = () => {
   if (loading) return <Loader />;
 
   return (
+    <PageTransitionProvider>
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Landing />} />
         <Route path="about" element={<About />} />
-        <Route path="classes" element={<InfoPage title="Classes" desc="Aerobics, Bhangra, Cardio, CrossFit, Power Yoga, Zumba and more." />} />
+        <Route path="classes" element={<Classes />} />
         <Route path="classes/:slug" element={<ClassDetail />} />
         <Route path="diet" element={<DietCounseling />} />
         <Route path="workout" element={<Workout />} />
@@ -80,6 +83,7 @@ const App = () => {
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
+    </PageTransitionProvider>
   );
 };
 

@@ -2,6 +2,19 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './ClassDetail.css';
 
+const CLASS_IMAGES = {
+  aerobics: 'https://www.latitudeonegym.com/wp-content/uploads/2015/12/Aerobics-Classes.jpeg',
+  bhangra: 'https://www.latitudeonegym.com/wp-content/uploads/2015/12/Bhangra-Classes.jpeg',
+  'body-sculpting': 'https://www.latitudeonegym.com/wp-content/uploads/2015/12/Body-Sculpting-Classes.jpeg',
+  cardio: 'https://www.latitudeonegym.com/wp-content/uploads/2015/12/Cardio-classes.jpeg',
+  crossfit: 'https://www.latitudeonegym.com/wp-content/uploads/2015/12/CrossFit-Classes.jpeg',
+  'fitness-studio': 'https://www.latitudeonegym.com/wp-content/uploads/2015/12/Fitness-Studio.jpeg',
+  'power-yoga': 'https://www.latitudeonegym.com/wp-content/uploads/2015/12/Power-Yoga-Classes.jpeg',
+  spinning: 'https://www.latitudeonegym.com/wp-content/uploads/2015/12/Spinning-Classes-1.jpeg',
+  strength: 'https://www.latitudeonegym.com/wp-content/uploads/2015/12/Strength-Classes-1.jpeg',
+  zumba: 'https://www.latitudeonegym.com/wp-content/uploads/2015/12/Zumba-Classes.jpeg',
+};
+
 const CLASS_DATA = {
   crossfit: {
     title: 'CrossFit',
@@ -162,7 +175,14 @@ const ClassDetail = () => {
       <section className="class-main">
         <div className="class-layout">
           <div className="class-content">
-            <div className="class-hero-img" />
+            <div
+              className="class-hero-img"
+              style={{
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${CLASS_IMAGES[slug] || CLASS_IMAGES.crossfit})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            />
             <h2>About the {data.title} classes</h2>
             <div className="class-about">
               {data.about.split('\n\n').map((p, i) => (
@@ -213,12 +233,6 @@ const ClassDetail = () => {
                 <li key={day}><strong>{day}:</strong> {time}</li>
               ))}
             </ul>
-            <div className="class-social">
-              <a href="#" aria-label="Facebook">f</a>
-              <a href="#" aria-label="Twitter">t</a>
-              <a href="#" aria-label="Google+">G+</a>
-              <a href="#" aria-label="LinkedIn">in</a>
-            </div>
           </div>
         </div>
       </section>

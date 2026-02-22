@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import api from '../utils/api';
 import './Contact.css';
 
@@ -11,6 +11,13 @@ const Contact = () => {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    if (window.location.hash === '#map') {
+      const el = document.getElementById('map');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -101,7 +108,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="contact-map-section">
+      <section id="map" className="contact-map-section">
         <h2 className="map-heading">Find Us on the Map</h2>
         <div className="map-divider" />
         <div className="map-container">
