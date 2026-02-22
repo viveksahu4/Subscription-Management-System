@@ -29,11 +29,6 @@ const Navbar = () => {
               <span className="icon-email">✉</span> cstechsv2531@gmail.com
             </span>
           </div>
-          <div className="top-bar-right">
-            <a href="#" className="social-icon" aria-label="Facebook">f</a>
-            <a href="#" className="social-icon" aria-label="Google+">G+</a>
-            <a href="#" className="social-icon" aria-label="LinkedIn">in</a>
-          </div>
         </div>
       </div>
 
